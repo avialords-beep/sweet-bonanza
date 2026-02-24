@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Sweet Bonanza (Свит Бонанза / Свитбананза) — играть онлайн | Демо, бонусы, промокод</title>
+  <meta name="description" content="Sweet Bonanza — играть онлайн: свит бонанза / свитбананза / свит бананза. Быстрый старт, демо и на деньги, бонусы и фриспины, промокод WW360. Pragmatic Play Sweet Bonanza." />
+  <meta name="keywords" content="sweet bonanza, свит бонанза, свитбананза, свит бананза играть, sweet bonanza играть онлайн, sweet bonanza демо, sweet bonanza на деньги, sweet bonanza бонус, sweet bonanza фриспины, sweet bonanza промокод, свит бонанза слот, pragmatic play sweet bonanza" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://sweet-bonanza.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Sweet Bonanza — играть онлайн (Свит Бонанза / Свитбананза)" />
+  <meta property="og:description" content="Быстрый вход в Sweet Bonanza: демо или на деньги. Бонусы, фриспины и промокод WW360." />
+  <meta property="og:image" content="https://sweet-bonanza.vercel.app/sweetbonanza_og_1200x630.png" />
+  <meta property="og:url" content="https://sweet-bonanza.vercel.app/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/26vmv7zs/image-2025-10-01-16-13-18.png">
+  <link rel="apple-touch-icon" href="https://i.postimg.cc/26vmv7zs/image-2025-10-01-16-13-18.png">
+  <meta name="theme-color" content="#0b0c12" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent1:#ff4fbf; /* pink */
+      --accent2:#ffcf4a; /* yellow */
+      --bg:#0b0c12;
+      --card:#141833;
+      --text:#f7f7fb;
+      --muted:#b9c0d4;
+      --line:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(900px 650px at 15% 10%, rgba(255,79,191,.18), transparent 55%),
+        radial-gradient(800px 600px at 85% 20%, rgba(255,207,74,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      overflow-x:hidden;
+      position:relative;
+      opacity:0;
+      animation:fadeIn 1.0s ease forwards;
+    }
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+    /* Falling candies */
+    #candies{
+      position:fixed; inset:0;
+      pointer-events:none;
+      overflow:hidden;
+      z-index:-1;
+    }
+    .candy{
+      position:absolute; top:-60px;
+      font-size:28px;
+      opacity:.78;
+      filter:drop-shadow(0 10px 20px rgba(0,0,0,.25));
+      animation:fall linear infinite, sway 3.2s ease-in-out infinite;
+      user-select:none;
+    }
+    @keyframes fall{0%{transform:translateY(-60px)}100%{transform:translateY(110vh)}}
+    @keyframes sway{0%,100%{margin-left:0}50%{margin-left:34px}}
+
+    /* Top bar */
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      background:rgba(11,12,18,.78);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .topbar-inner{
+      max-width:1000px; margin:0 auto; padding:12px 10px;
+      display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none; color:var(--text);
+      font-weight:900;
+      font-family:Montserrat,sans-serif;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:flex;align-items:center;justify-content:center;
+      color:#0b0c12;
+      font-weight:900;
+    }
+    .top-buttons{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:900;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      transition:transform .14s ease, filter .14s ease;
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-2px); filter:saturate(1.05)}
+    .btnPrimary{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#0b0c12;
+      border:none;
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+      min-width:160px;
+    }
+
+    h1{
+      font-family:Montserrat,sans-serif;
+      font-size:12vw;
+      font-weight:900;
+      text-align:center;
+      margin:18px 20px 8px 20px;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 18px rgba(255,79,191,.18);
+    }
+
+    .container{max-width:1000px;margin:0 auto;padding:10px;position:relative;top:-6px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      margin:16px 0;
+      box-shadow:0 10px 26px rgba(0,0,0,.55);
+      transition:transform .22s, box-shadow .22s;
+    }
+    .card:hover{transform:translateY(-2px); box-shadow:0 14px 34px rgba(255,79,191,.12)}
+    h2{
+      font-family:Montserrat,sans-serif;
+      font-size:5vw;
+      margin-bottom:10px;
+      color:var(--text);
+    }
+    p,li{
+      color:var(--muted);
+      line-height:1.65;
+      font-size:4.1vw;
+    }
+    ul{padding-left:20px}
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top:14px;
+    }
+    .buttons a{flex:1 1 auto;text-align:center}
+
+    .hero-img{
+      margin-top:12px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+    }
+    .hero-img img{width:100%;height:auto;display:block}
+
+    .promo{text-align:center;margin:24px 0 30px 0}
+    .promo-code{
+      display:inline-block;
+      background:rgba(0,0,0,.25);
+      border:2px solid rgba(255,207,74,.40);
+      color:var(--accent2);
+      padding:10px 18px;
+      font-family:Montserrat,sans-serif;
+      font-weight:900;
+      font-size:5vw;
+      border-radius:12px;
+      margin-bottom:10px;
+      letter-spacing:1px;
+      cursor:pointer;
+    }
+    .copy-btn{
+      display:block;margin:10px auto 8px auto;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#0b0c12;border:none;
+      font-weight:900;
+      font-size:4vw;
+      padding:10px 18px;
+      border-radius:12px;
+      cursor:pointer;
+      transition:.14s;
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+    .copy-btn:hover{transform:translateY(-2px)}
+    .notification{margin-top:6px;color:#8fffa8;display:none;font-size:3.6vw;font-weight:800}
+
+    .faq-item{margin-bottom:12px}
+    .faq-item h3{font-size:4.3vw;margin-bottom:6px;color:var(--text)}
+    .faq-item p{font-size:4vw}
+
+    @media(min-width:768px){
+      h1{font-size:76px}
+      h2{font-size:26px}
+      p,li{font-size:16px}
+      .promo-code{font-size:22px}
+      .copy-btn{font-size:18px;padding:12px 28px}
+      .notification{font-size:14px}
+      .faq-item h3{font-size:18px}
+      .faq-item p{font-size:15px}
+    }
+
+    footer{
+      text-align:center;
+      padding:18px 0;
+      margin-top:28px;
+      font-size:13px;
+      color:#9da5b4;
+      border-top:1px solid rgba(255,255,255,.08);
+      background-color:rgba(0,0,0,.08);
+    }
+    footer b{color:var(--text)}
+  </style>
+
+  <!-- Microdata: Game -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Game",
+    "name":"Sweet Bonanza",
+    "alternateName":["Свит Бонанза","Свитбананза","Свит Бананза","Свит бананза","Сладкая Бонанза","свит бонанза слот"],
+    "genre":"Slot",
+    "publisher":{"@type":"Organization","name":"Pragmatic Play"},
+    "inLanguage":"ru-RU",
+    "audience":{"@type":"PeopleAudience","suggestedMinAge":"18"}
+  }
+  </script>
+
+  <!-- Microdata: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Sweet Bonanza и свит бонанза — это одно и то же?","acceptedAnswer":{"@type":"Answer","text":"Да. В Яндексе пишут по-разному: sweet bonanza, свит бонанза, свитбананза, сладкая бонанза — это один слот."}},
+      {"@type":"Question","name":"Можно ли запустить Sweet Bonanza демо?","acceptedAnswer":{"@type":"Answer","text":"Обычно да: в лобби доступен sweet bonanza демо, если площадка показывает демо-режим."}},
+      {"@type":"Question","name":"Как играть Sweet Bonanza на деньги?","acceptedAnswer":{"@type":"Answer","text":"Выбираешь режим на деньги, задаёшь ставку и запускаешь вращение. Всё как в классическом слоте."}},
+      {"@type":"Question","name":"Где взять sweet bonanza бонус и фриспины?","acceptedAnswer":{"@type":"Answer","text":"Скопируй промокод WW360 и введи при регистрации/в бонусах, если поле доступно."}},
+      {"@type":"Question","name":"Это слот от Pragmatic Play?","acceptedAnswer":{"@type":"Answer","text":"Да, pragmatic play sweet bonanza — один из самых известных слотов провайдера."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="candies" aria-hidden="true"></div>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="logo">SB</span>
+        Sweet Bonanza
+      </a>
+      <div class="top-buttons">
+        <a class="btn btnPrimary" href="https://lkhq.cc/e783" target="_blank" rel="noopener noreferrer">▶ Играть</a>
+        <a class="btn" href="#promo">🎁 Промокод</a>
+      </div>
+    </div>
+  </div>
+
+  <h1 id="top">Sweet Bonanza</h1>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Зайти и играть</h2>
+      <p>
+        Ищешь <b>sweet bonanza</b>? Это она: <b>свит бонанза</b>, <b>свитбананза</b>, <b>свит бананза играть</b>.
+        Нажимай «Играть» — откроется запуск. Дальше выбираешь <b>sweet bonanza демо</b> или <b>sweet bonanza на деньги</b>.
+      </p>
+
+      <div class="hero-img">
+        <img src="sweetbonanza_hero_900x600.png" alt="Sweet Bonanza — свит бонанза слот: демо и на деньги" width="900" height="600" loading="lazy">
+      </div>
+
+      <div class="buttons">
+        <a href="https://lkhq.cc/e783" target="_blank" rel="noopener noreferrer" class="btn btnPrimary">▶ Играть в Sweet Bonanza</a>
+        <a href="#promo" class="btn">🎁 Промокод WW360</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Почему здесь удобно</h2>
+      <ul>
+        <li><b>Быстрый старт:</b> без лишних переходов — один клик.</li>
+        <li><b>Демо и на деньги:</b> выбираешь режим по ситуации.</li>
+        <li><b>Бонусы:</b> промокод для <b>sweet bonanza бонус</b> и <b>sweet bonanza фриспины</b> (если доступно).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Как играть (4 шага)</h2>
+      <ul>
+        <li>Нажми «Играть».</li>
+        <li>Выбери демо или режим на деньги.</li>
+        <li>Поставь ставку и запусти вращение.</li>
+        <li>Хочешь бонус — введи промокод WW360.</li>
+      </ul>
+      <div class="buttons">
+        <a href="https://lkhq.cc/e783" target="_blank" rel="noopener noreferrer" class="btn btnPrimary">▶ Играть</a>
+      </div>
+    </div>
+
+    <div class="promo" id="promo">
+      <h2>Промокод</h2>
+      <div class="promo-code" id="promoValue" title="Нажми, чтобы скопировать">WW360</div>
+      <button class="copy-btn" id="copyBtn">Скопировать промокод</button>
+      <div id="notify" class="notification">Промокод скопирован!</div>
+      <p style="margin-top:10px;color:#b9c0d4">
+        Подсказка: если поля нет при регистрации — проверь раздел «Бонусы» после входа.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>Sweet Bonanza / Свит Бонанза — одно и то же?</h3>
+        <p>Да. В Яндексе название пишут по‑разному: sweet bonanza, свит бонанза, свитбананза, сладкая бонанза.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Есть ли Sweet Bonanza демо?</h3>
+        <p>Обычно да: демо-режим доступен в лобби, если площадка его показывает.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Можно играть Sweet Bonanza на деньги?</h3>
+        <p>Да. Выбираешь режим на деньги, ставку и запускаешь слот.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Как получить бонусы и фриспины?</h3>
+        <p>Используй промокод <b>WW360</b> — если доступно, начислят бонус/фриспины по правилам площадки.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Кто разработчик?</h3>
+        <p>Это <b>pragmatic play sweet bonanza</b> — слот от Pragmatic Play.</p>
+      </div>
+
+      <div class="buttons">
+        <a href="https://lkhq.cc/e783" target="_blank" rel="noopener noreferrer" class="btn btnPrimary">▶ Играть в Sweet Bonanza</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p style="margin:0;"><b>18+</b> Азартные игры могут вызывать зависимость. Играйте ответственно.</p>
+  </footer>
+
+  <script>
+    // copy promo
+    function copyPromo() {
+      const code = document.getElementById("promoValue").innerText.trim();
+      const show = () => {
+        const notify = document.getElementById("notify");
+        notify.style.display = "block";
+        setTimeout(() => notify.style.display = "none", 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(show).catch(() => alert("Скопируй вручную: " + code));
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        show();
+      }
+    }
+    document.getElementById("copyBtn").addEventListener("click", copyPromo);
+    document.getElementById("promoValue").addEventListener("click", copyPromo);
+
+    // falling candies
+    (function(){
+      const container = document.getElementById("candies");
+      const icons = ["🍬","🍭","🍒","🍌","🍓","🍍","🍇"];
+      const num = 16;
+      for (let i=0;i<num;i++) {
+        const el = document.createElement("div");
+        el.className = "candy";
+        el.innerText = icons[Math.floor(Math.random()*icons.length)];
+        el.style.left = (Math.random()*100) + "vw";
+        el.style.fontSize = (20 + Math.random()*20) + "px";
+        el.style.animationDuration = (3.8 + Math.random()*3.0) + "s";
+        el.style.animationDelay = (Math.random()*5) + "s";
+        container.appendChild(el);
+      }
+    })();
+  </script>
+</body>
+</html>
