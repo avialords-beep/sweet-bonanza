@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sweet-bonanza.vercel.app/sitemap.xml
-Host: sweet-bonanza.vercel.app
+Sitemap: https://sweet-bonanza-gamma.vercel.app/sitemap.xml
+
+Host: sweet-bonanza-gamma.vercel.app
